@@ -70,7 +70,7 @@ if img_file:
     st.image(img)
 
 custom_img = st.file_uploader(
-    "You can upload a custom background image to replace the default black one with 640x1280 dimensions (otherwise it is resized)", 
+    "You can upload a custom image", 
     type=["png", "jpg"]
 )
 if custom_img:
