@@ -16,3 +16,9 @@ st.line_chart(df)
 st.area_chart(df)
 mySlider=st.slider('Celsius')
 st.write(mySlider,' in Fahrenheit  ',mySlider*9/5+32)
+
+file_png = st.file_uploader("Upload a PNG image", type=([".png"]))
+
+if file_png:
+    file_png_bytes = st.file_reader(file_png)
+    st.image(file_png_bytes)
