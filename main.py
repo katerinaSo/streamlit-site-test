@@ -13,3 +13,6 @@ st.write('''multiline \n
 
 st.write(df)
 st.line_chart(df)
+st.area_chart(df)
+mySlider=st.slider('Celsius')
+st.write(mySlider,' in Fahrenheit  ',mySlider*9/5+32)
