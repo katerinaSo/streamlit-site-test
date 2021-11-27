@@ -68,3 +68,10 @@ if img_file:
     st.write("Preview")
     img.thumbnail((150,150))
     st.image(img)
+
+custom_img = st.file_uploader(
+    "You can upload a custom background image to replace the default black one with 640x1280 dimensions (otherwise it is resized)", 
+    type=["png", "jpg"]
+)
+if custom_img:
+	st.image(custom_img)
