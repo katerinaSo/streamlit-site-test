@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from streamlit_cropper import st_cropper
+# from streamlit_cropper import st_cropper
 from PIL import Image
 data={
 	"series_1":[1,2,30,4,50],
