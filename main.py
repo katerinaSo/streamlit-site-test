@@ -7,6 +7,20 @@ data={
 	"series_2":[10,30,30,10,50]
 }
 df=pd.DataFrame(data)
+img_file='car1.gif'
+if img_file:
+    img = Image.open(img_file)
+    # if not realtime_update:
+    #     st.write("Double click to save crop")
+    # Get a cropped image from the frontend
+    # cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
+    #                             aspect_ratio=aspect_ratio)
+    
+    # Manipulate cropped image at will
+    # st.write("Preview")
+    img.thumbnail((150,150))
+    st.image(img)
+
 st.title('first streamlit app')
 st.subheader('add subheader')
 st.write('''multiline \n
@@ -41,10 +55,10 @@ st.write(mySlider,' in Fahrenheit  ',mySlider*9/5+32)
 #     st.image(file_png_bytes)
 
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
+# st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Upload an image and set some options for demo purposes
-st.header("Cropper Demo")
+# st.header("Cropper Demo")
 # img_file = st.sidebar.file_uploader(label='Upload a file', type=['png', 'jpg'])
 # realtime_update = st.sidebar.checkbox(label="Update in Real Time", value=True)
 # box_color = st.sidebar.color_picker(label="Box Color", value='#0000FF')
@@ -55,19 +69,6 @@ st.header("Cropper Demo")
 #                 "2:3": (2,3),
 #                 "Free": None}
 # aspect_ratio = aspect_dict[aspect_choice]
-img_file='car1.gif'
-if img_file:
-    img = Image.open(img_file)
-    # if not realtime_update:
-    #     st.write("Double click to save crop")
-    # Get a cropped image from the frontend
-    # cropped_img = st_cropper(img, realtime_update=realtime_update, box_color=box_color,
-    #                             aspect_ratio=aspect_ratio)
-    
-    # Manipulate cropped image at will
-    st.write("Preview")
-    img.thumbnail((150,150))
-    st.image(img)
 
 custom_img = st.file_uploader(
     "You can upload a custom image", 
